@@ -1,0 +1,85 @@
+/* Global Styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: skyblue;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #111;
+  padding: 15px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: skyblue;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.carousel-image {
+  width: 100%;
+  border: 3px solid skyblue;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background: skyblue;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 20px; }
+  h2 { font-size: 18px; }
+  .section { padding: 20px 10px; }
+}
